@@ -24,3 +24,15 @@ def read_root():
 @app.get("/rooms")
 def get_rooms():
     return rooms
+
+@app.get("/recommend")
+def recommend_room(budget: int):
+    
+    if budget < 120:
+        return {"recommended": "Standard Room"}
+
+    elif budget < 200:
+        return {"recommended": "Deluxe Room"}
+
+    else:
+        return {"recommended": "Suite"}

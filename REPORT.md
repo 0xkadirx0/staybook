@@ -81,6 +81,7 @@ Example response:
   { "id": 3, "name": "Suite", "price": 250 }
 ]
 ### GET `/recommend?budget=VALUE`
+]
 
 Returns a recommended room based on the user's budget.
 

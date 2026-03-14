@@ -45,7 +45,7 @@ This system provides a lightweight solution that demonstrates how such functiona
 
 # System Architecture
 
-The system consists of two main parts:
+The system consists of two main parts.
 
 ## 1. Frontend
 
@@ -66,7 +66,9 @@ The backend is built using **Python FastAPI**.
 
 It exposes REST API endpoints that allow the frontend to retrieve room information and receive recommendations.
 
-### Available API Endpoints
+---
+
+## Available API Endpoints
 
 ### GET `/rooms`
 
@@ -80,20 +82,30 @@ Example response:
   { "id": 2, "name": "Deluxe Room", "price": 150 },
   { "id": 3, "name": "Suite", "price": 250 }
 ]
+```
+
+---
+
 ### GET `/recommend?budget=VALUE`
 
 Returns a recommended room based on the user's budget.
 
 Example request:
 
+```
 /recommend?budget=150
+```
 
 Example response:
 
+```json
 {
   "name": "Deluxe Room",
   "price": 150
 }
+```
+
+---
 
 # AI Recommendation Logic
 
@@ -107,8 +119,11 @@ Rules used:
 
 This demonstrates a simple AI-style decision system integrated into the web application.
 
+---
+
 # Project Repository Structure
 
+```
 staybook
 │
 ├ index.html
@@ -126,11 +141,14 @@ staybook
 ├ requirements.txt
 │
 └ responsibilities/
+```
+
+---
 
 # Conclusion
 
 This project demonstrates how multiple web technologies can be combined to build a small full-stack system.
 
-The system integrates frontend development, backend API development, and a simple AI recommendation logic.
+The system integrates **frontend development, backend API development, and a simple AI recommendation logic**.
 
-It demonstrates the practical application of concepts learned in the SWE314 Web Programming course.
+It demonstrates the practical application of concepts learned in the **SWE314 Web Programming course**.

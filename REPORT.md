@@ -63,3 +63,61 @@ JavaScript fetches room data dynamically from the backend API.
 The backend is built using **Python FastAPI**.
 
 Available API endpoints:
+
+Available API endpoints:
+
+GET /rooms
+
+Returns a list of available rooms and their prices.
+
+Example response:
+
+[
+  { "id": 1, "name": "Standard Room", "price": 100 },
+  { "id": 2, "name": "Deluxe Room", "price": 150 },
+  { "id": 3, "name": "Suite", "price": 250 }
+]
+
+GET /recommend?budget=VALUE
+
+Returns a recommended room based on the user's budget.
+
+Example:
+
+/recommend?budget=150
+
+Response:
+
+Deluxe Room
+
+AI Recommendation Logic
+
+A simple rule-based recommendation system was implemented.
+
+Rules used:
+
+Budget < 120 → Standard Room
+Budget < 200 → Deluxe Room
+Budget ≥ 200 → Suite
+
+This demonstrates a simple AI-based decision system integrated into a web application.
+
+Project Repository Structure
+
+staybook
+│
+├ index.html
+├ rooms.html
+├ style.css
+├ main.py
+├ README.md
+├ REPORT.md
+└ responsibilities/
+
+Conclusion
+
+This project demonstrates how multiple web technologies can be combined to build a small full-stack system.
+
+The system integrates frontend development, backend API development, and a simple AI recommendation logic.
+
+It demonstrates the practical application of concepts learned in the SWE314 Web Programming course.
